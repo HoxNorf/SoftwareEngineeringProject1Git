@@ -35,6 +35,14 @@ public class ATM {
             me.checkingsDeposit(amount);
             
         }
+    
+    public void withdraw(float amount) {
+        System.out.println("$"+ amount + " has been taken out");
+        //if(savings)
+        me.savingsWithdraw(amount);
+        //if(checkings)
+        me.checkingsWithdraw(amount);
+    }
 
 
     public static void main(String[] args) {
