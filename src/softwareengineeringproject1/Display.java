@@ -21,7 +21,7 @@ public class Display extends ATM{
 
             int choice = myObj.nextInt();
 
-            if (choice < 0 || choice > 4) {
+            if (choice < 1 || choice > 4) {
                 System.out.println("Exit.");
                 break;
             }
@@ -31,7 +31,71 @@ public class Display extends ATM{
             }
 
             if (choice == 2) {
-                withdrawDisplay();
+                boolean advance = false;
+                while (!advance){
+                    withdrawDisplay();
+                    System.out.print("Choose the option given: ");
+                    int choiceWithdraw = myObj.nextInt();
+                    if (choiceWithdraw == 1){
+//                       if (amount - 20 >= 0){
+//                            deposit(20);
+//                            advance = true;
+//                       } else {
+//                            System.out.println("Insufficient funds!");
+//                       }
+                    } else if (choiceWithdraw == 2){
+//                       if (amount - 40 >= 0){
+//                            deposit(40);
+//                            advance = true;
+//                       } else {
+//                            System.out.println("Insufficient funds!");
+//                       }
+                    } else if (choiceWithdraw == 2){
+//                       if (amount - 40 >= 0){
+//                            deposit(40);
+//                            advance = true;
+//                       } else {
+//                            System.out.println("Insufficient funds!");
+//                       }
+                    } else if (choiceWithdraw == 3){
+//                       if (amount - 60 >= 0){
+//                            deposit(60);
+//                            advance = true;
+//                       } else {
+//                            System.out.println("Insufficient funds!");
+//                       }
+                    } else if (choiceWithdraw == 4){
+//                       if (amount - 80 >= 0){
+//                            deposit(80);
+//                            advance = true;
+//                       } else {
+//                            System.out.println("Insufficient funds!");
+//                       }
+                    } else if (choiceWithdraw == 5){
+//                       if (amount - 100 >= 0){
+//                            deposit(100);
+//                            advance = true;
+//                       } else {
+//                            System.out.println("Insufficient funds!");
+//                       }
+                    } else if (choiceWithdraw == 6){
+//                       if (amount - 120 >= 0){
+//                            deposit(120);
+//                            advance = true;
+//                       } else {
+//                            System.out.println("Insufficient funds!");
+//                       }
+                    } else if (choiceWithdraw == 7){
+//                       if (amount - 140 >= 0){
+//                            deposit(140);
+//                            advance = true;
+//                       } else {
+//                            System.out.println("Insufficient funds!");
+//                       }
+                    } else {
+                        advance = true;
+                    }   
+                }
             }
 
             if (choice == 3) {//This is our keypad, user chose 3, send 3 back to the atm.
@@ -93,7 +157,7 @@ public class Display extends ATM{
     }
 
     public void transferDisplay() {
-        System.out.println(" We will trasnfer here");
+        System.out.println(" We will transfer here");
     }
 
 }
