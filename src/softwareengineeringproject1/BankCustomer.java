@@ -186,7 +186,9 @@ public class BankCustomer {
     }
 
     public void checkingsWithdraw(double amount){
-        cAccount.minusBalance(amount);
+        if (cAccount.getBalance() - amount >= 0){
+            cAccount.minusBalance(amount);
+        }
         checkingsBalance = cAccount.getBalance();
         cAccount.setBalance(checkingsBalance);
     }
@@ -201,7 +203,9 @@ public class BankCustomer {
     }
 
     public void savingsWithdraw(double amount){
-        sAccount.minusBalance(amount);
+        if (sAccount.getBalance() - amount >= 0){
+            sAccount.minusBalance(amount);
+        }
         savingsBalance = sAccount.getBalance();
         sAccount.setBalance(savingsBalance);
     }
